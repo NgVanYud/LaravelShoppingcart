@@ -1,0 +1,43 @@
+{
+    "name": "ngduy/shoppingcart",
+    "description": "Laravel Shoppingcart",
+    "keywords": ["laravel", "shoppingcart"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Duy Nguyen",
+            "email": "duy.nv.96@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "6.2.*",
+        "illuminate/session": "6.2.*",
+        "illuminate/events": "6.2.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0 || ~6.0 || ~8.4",
+        "mockery/mockery": "^1.2",
+        "orchestra/testbench": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NgDuy\\Shoppingcart\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NgDuy\\Tests\\Shoppingcart\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NgDuy\\Shoppingcart\\ShoppingcartServiceProvider"
+            ],
+            "aliases": {
+                "Cart": "NgDuy\\Shoppingcart\\Facades\\Cart"
+            }
+        }
+    }
+}
